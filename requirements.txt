@@ -1,0 +1,20 @@
+## JupyterLab
+jupyterlab
+jupyterlab-language-pack-ja-JP
+nodejs
+
+## 機械学習
+scikit-learn
+numpy
+scipy
+pandas
+pandas-datareader
+tensorflow
+matplotlib
+
+##web解析・操作
+beautifulsoup4
+selenium
+
+##3次元点群処理で必要なもの
+open3d == 0.18.0

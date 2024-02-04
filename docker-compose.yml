@@ -1,0 +1,25 @@
+version: '3'
+services:
+  j-lab:
+    restart: always
+    build:
+      context: .    #Dockerfileがあるディレクトリ
+      dockerfile: ./Dockerfile    #Dockerfile を指定
+    image: j-lab-img:${TAG}    #build時にイメージ名を宣言
+    container_name: 'j-lab'    #build時にコンテナ名を宣言
+    tty: true
+    volumes:
+      - type: bind
+        source: "./src"
+        target: "/src"
+    command: >    #起動直後にjupyter serverが立ち上げる
+      sh -c
+      "jupyter-lab
+      --allow-root
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      -b localhost
+      --NotebookApp.token='' "
+    ports:
+      - "8888:8888"
