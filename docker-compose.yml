@@ -12,6 +12,7 @@ services:
       - type: bind
         source: "./src"
         target: "/src"
+      - /tmp/.X11-unix/:/tmp/.X11-unix
     command: >    #起動直後にjupyter serverが立ち上げる
       sh -c
       "jupyter-lab
