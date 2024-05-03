@@ -15,6 +15,7 @@ matplotlib
 ##web解析・操作
 beautifulsoup4
 selenium
+seaborn
 
 ##3次元点群処理で必要なもの
 open3d == 0.18.0
